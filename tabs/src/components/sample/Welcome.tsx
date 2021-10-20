@@ -61,7 +61,7 @@ export function Welcome(props: { showFunction?: boolean; environment?: string })
         <h1 className="center">Congratulations{userName ? ", " + userName : ""}!</h1>
         <p className="center">Your app is running in your {friendlyEnvironmentName}</p>
         <Input
-                            placeholder="Enter a value here"
+                            placeholder="Enter a value here to share with other tab"
                             fluid
                             clearable
                             value={text}
