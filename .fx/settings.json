@@ -1,0 +1,21 @@
+{
+    "appName": "TeamsToolkitSSOTab",
+    "projectId": "fc2a2fcb-c77b-4e33-80ef-30ef539f833b",
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "Azure",
+        "capabilities": [
+            "Tab"
+        ],
+        "azureResources": [],
+        "activeResourcePlugins": [
+            "fx-resource-frontend-hosting",
+            "fx-resource-aad-app-for-teams",
+            "fx-resource-local-debug",
+            "fx-resource-appstudio",
+            "fx-resource-simple-auth"
+        ]
+    },
+    "programmingLanguage": "typescript"
+}
