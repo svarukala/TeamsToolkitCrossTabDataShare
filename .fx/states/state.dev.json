@@ -1,0 +1,12 @@
+{
+    "solution": {
+        "teamsAppTenantId": "{{solution.teamsAppTenantId}}"
+    },
+    "fx-resource-frontend-hosting": {},
+    "fx-resource-aad-app-for-teams": {
+        "oauthHost": "https://login.microsoftonline.com",
+        "oauthAuthority": "https://login.microsoftonline.com/044f7a81-1422-4b3d-8f68-3001456e6406"
+    },
+    "fx-resource-appstudio": {},
+    "fx-resource-simple-auth": {}
+}

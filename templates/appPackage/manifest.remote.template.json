@@ -2,21 +2,21 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
     "manifestVersion": "1.9",
     "version": "1.0.0",
-    "id": "{appid}",
+    "id": "{{state.fx-resource-appstudio.teamsAppId}}",
     "packageName": "com.microsoft.teams.extension",
     "developer": {
         "name": "Teams App, Inc.",
-        "websiteUrl": "{baseUrl}",
-        "privacyUrl": "{baseUrl}/index.html#/privacy",
-        "termsOfUseUrl": "{baseUrl}/index.html#/termsofuse"
+        "websiteUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}",
+        "privacyUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/privacy",
+        "termsOfUseUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/termsofuse"
     },
     "icons": {
         "color": "color.png",
         "outline": "outline.png"
     },
     "name": {
-        "short": "TeamsToolkitSSOTab",
-        "full": "This field is not used"
+        "short": "{{config.manifest.appName.short}}",
+        "full": "{{config.manifest.appName.full}}"
     },
     "description": {
         "short": "Short description of TeamsToolkitSSOTab.",
@@ -27,7 +27,7 @@
     "composeExtensions": [],
     "configurableTabs": [
         {
-            "configurationUrl": "{baseUrl}/index.html#/config",
+            "configurationUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/config",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team",
@@ -39,8 +39,8 @@
         {
             "entityId": "index",
             "name": "Personal Tab",
-            "contentUrl": "{baseUrl}/index.html#/tab",
-            "websiteUrl": "{baseUrl}/index.html#/tab",
+            "contentUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/tab",
+            "websiteUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/tab",
             "scopes": [
                 "personal",
                 "team"
@@ -49,8 +49,8 @@
         {
             "entityId": "index2",
             "name": "Privacy Tab",
-            "contentUrl": "{baseUrl}/index.html#/privacy",
-            "websiteUrl": "{baseUrl}/index.html#/privacy",
+            "contentUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/privacy",
+            "websiteUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}/index.html#/privacy",
             "scopes": [
                 "personal",
                 "team"
@@ -63,7 +63,7 @@
     ],
     "validDomains": [],
     "webApplicationInfo": {
-        "id": "{appClientId}",
-        "resource": "{webApplicationInfoResource}"
+        "id": "{{state.fx-resource-aad-app-for-teams.clientId}}",
+        "resource": "{{{state.fx-resource-aad-app-for-teams.applicationIdUris}}}"
     }
 }

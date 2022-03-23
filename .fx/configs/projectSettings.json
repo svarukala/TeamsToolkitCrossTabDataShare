@@ -17,5 +17,6 @@
             "fx-resource-simple-auth"
         ]
     },
-    "programmingLanguage": "typescript"
+    "programmingLanguage": "typescript",
+    "version": "2.0.0"
 }

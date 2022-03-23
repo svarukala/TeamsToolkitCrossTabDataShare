@@ -46,9 +46,14 @@ export function Welcome(props: { showFunction?: boolean; environment?: string })
     return isInTeams ? await credential.getUserInfo() : undefined;
   })?.data;
   const userName = userProfile ? userProfile.displayName : "";
+  const [entityId, setEntityId] = useState<string | undefined>();
+  microsoftTeams.getContext((context) => {
+    setEntityId(context.entityId);
+  });
 
   const switchTabPage = () => {
     console.log("User clicked the switch button");
+    console.log("ENTITYID: "+ entityId);
     console.log("https://teams.microsoft.com/l/entity/9d67195a-1e68-4ec8-8240-abdb6fbd108f/index2");
     //microsoftTeams.executeDeepLink("https://teams.microsoft.com/_#/apps/9f6f3a1d-c3ac-4f14-86eb-d5806baa3ef4/sections/index2");
     var encodedContext = encodeURI(`{"subEntityId": "${text}" }`);
